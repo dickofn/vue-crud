@@ -4,9 +4,9 @@
       <v-flex xs12 sm8 md4>
         <v-card class="elevation-12">
           <v-toolbar dark color="primary">
-            <v-toolbar-title>Login form</v-toolbar-title>
+            <v-toolbar-title>Signup form</v-toolbar-title>
           </v-toolbar>
-          <v-form @submit.prevent="login" v-model="valid" lazy-validation>
+          <v-form @submit.prevent="signup" v-model="valid" lazy-validation>
             <v-card-text>
               <v-text-field
                 prepend-icon="person"
@@ -30,9 +30,9 @@
             </v-card-text>
             <v-card-actions>
               <v-spacer></v-spacer>
-              <v-btn type="submit" :disabled="!valid">Login</v-btn>
-              <router-link to="signup" style="text-decoration:none">
-                <v-btn>Signup</v-btn>
+              <v-btn type="submit" :disabled="!valid">Signup</v-btn>
+              <router-link to="login" style="text-decoration:none">
+                <v-btn>Login</v-btn>
               </router-link>
             </v-card-actions>
           </v-form>
@@ -59,8 +59,8 @@ export default {
     }
   },
   methods: {
-    login () {
-      firebase.auth().signInWithEmailAndPassword(this.email, this.password).then(
+    signup () {
+      firebase.auth().createUserWithEmailAndPassword(this.email, this.password).then(
         (user) => {
           this.$router.replace('home')
         },
