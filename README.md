@@ -15,15 +15,11 @@ npm run serve
 npm run build
 ```
 
-### Run your tests
+### Step
 ```
-npm run test
+1. Clone or Download this project
+2. Get your terminal or cmd in the root of the project
+3. Run "npm install" to install all the node dependency
+4. Run "npm run serve" to run the local server
+5. Open your browser and go to localhost:8080
 ```
-
-### Lints and fixes files
-```
-npm run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
